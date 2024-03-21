@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'font';
+    src: url('font.ttf') format('truetype');
+}
+
+body {
+    font-family: 'font';
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.logo {
+    position: absolute;
+    font-size: 4em; 
+    font-weight: 900;
+    color: white;
+    top: 6vh;
+    left: 5.2vw;
+    width: 100vw;
+    z-index: 100;
+}
+
+.introduction {
+    position: absolute;
+    font-size: 2em; /*32px*/
+    color: white;
+    top: 16.5vh;
+    left: 5.2vw;
+    width: 100vh;
+    z-index: 100;
+}
+
+nav {
+    position: absolute;
+    font-size: 2em; /*32px*/
+    top: 6vh;
+    left: 57.6vw;
+    width: 36vw;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+nav a {
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 10px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+#home {
+    margin: 0;
+    padding: 0;
+    height: 110vh;
+    background-image: url('img/taichung.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+}
+
+.page {
+    position: relative;
+    height: 100vh; /* 將高度設置為自動，以使內容可以動態調整高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 將內容放置在頁面的頂部 */
+    align-items: center;
+    text-align: center;
+}
+
+
+.page .title,
+.page .information {
+    margin: 0; /* 重置默认边距 */
+    padding: 10px; /* 添加一些内边距 */
+}
+
+.page .title {
+    margin-top: 20px; /* 將標題上移 */
+    padding: 10px; /* 添加一些内边距 */
+    font-size: 4em; /* 调整标题大小 */
+    font-weight: bold; /* 调整标题粗细 */
+}
+
+.page .divider {
+    width: 80%;
+    border-top: 5px solid black;
+    margin-top: 20px; /* 調整分隔線的上邊距 */
+}
+
+.page .information {
+    font-size: 1.5em; /* 調整information字型大小 */
+    margin-top: 20px; /* 根據需要調整上邊距 */
+}
+
+#about {
+    margin: 0;
+    padding: 0;
+    height: 110vh;
+    position: relative;
+    overflow: hidden; /* 添加此行 */
+}
+
+#about .background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; /* 宽度设为视口宽度 */
+    height: 100%; /* 高度设为视口高度 */
+    background-image: url('img/taipei2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* 将背景图像置于内容下方 */
+}
+
+#about-page-content {
+    position: relative;
+    z-index: 1; /* 确保内容在模糊背景上方 */
+}
+
+#about .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* 白色背景，70% 透明度 */
+}
+
+#region {
+    position: relative; /* 確保相對定位 */
+    height: 100vh; /* 保持div的高度為100vh */
+}
+
+#region .background-image {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%; /* 圖片寬度填滿div */
+    height: 60%; /* 圖片高度填滿div */
+    background-image: url('img/縣市圖上色.jpg');
+    background-size: contain; /* 使圖片完全包含在div內 */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#region .title {
+    position: absolute;
+    top: 10%; /* 調整title相對於div的上邊距 */
+    left: 50%;
+    transform: translateX(-50%); /* 將title水平居中 */
+    font-size: 4em; /* 調整title字型大小 */
+    font-weight: bold; /* 調整title字型粗細 */
+}
+
+#region .divider {
+    position: absolute;
+    top: 25%; /* 調整divider相對於div的上邊距 */
+    left: 50%;
+    transform: translateX(-50%); /* 將divider水平居中 */
+    width: 80%; /* 根据需要调整宽度 */
+    border-top: 5px solid black; /* 设置分隔线的样式 */
+}
+
+.divider {
+    border-top: 5px solid black; /* 设置分隔线的样式 */
+    margin: 0 auto; /* 居中 */
+    width: 80%; /* 根据需要调整宽度 */
+}
+
+.login {
+    border: 2px solid #ced4da; /* 淺灰色邊框 */
+    padding: 20px; /* 內邊距 */
+    border-radius: 10px; /* 圓角 */
+    width: 30%; /* 寬度 */
+    margin: 0 auto; /* 水平置中 */
+    margin-top: 50px; /* 與上方的距離 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 15px; /* 調整容器之間的垂直間距 */
+}
+
+.loginBtn {
+    border-radius: 15px;
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 2.1em;
+    color:#000;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(85%);
+    }
+    to{
+        transform: translateX(-15%);
+    }
+
+}
+
+#companies {
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0px;
+    white-space: nowrap;
+    position: relative;
+    background: white;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), red);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    animation: 30s slide infinite linear;
+    display: inline-block;
+}
+
+.logos img {
+    width: 300px;
+    margin: 0 20px;
+}
+
+.logos img:hover {
+    transform: scale(1.1,1.1);
+}
